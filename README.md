@@ -16,7 +16,7 @@ Transcriptome upstream analysis pipeline with Nextflow for paired-end reads. It 
 
   `FeatureCount - featureCounts`: Quantifies gene expression by counting the number of reads aligned to each gene using featureCounts.
 
-#### PS: you have to make sure you have installed all of these tools on your environment before using this pipline.
+#### PS: you have to make sure you have installed NextFlow and all of these tools on your environment before using this pipline.
 
 # Input Parameters
 
@@ -35,7 +35,7 @@ The pipeline accepts the following input parameters:
 # Usage
 
 ```bash
-nextflow run transseqflow --reads '/path/to/raw_reads/*_{1,2}.fastq.gz' --transcriptome_file '/path/to/ref/reference.fasta' --annotationfile_file '/path/to/ref/annotation.gtf'
+nextflow run transseqflowPE --reads '/path/to/raw_reads/*_{1,2}.fastq.gz' --transcriptome_file '/path/to/ref/reference.fasta' --annotationfile_file '/path/to/ref/annotation.gtf'
 ```
 
 # Outputs
