@@ -18,3 +18,36 @@ Transcriptome upstream analysis pipeline with Nextflow for paired-end reads. It 
 
 #### PS: you have to make sure you have installed all of these tools on your environment before using this pipline.
 
+# Input Parameters
+
+The pipeline accepts the following input parameters:
+  
+  `reads`: Path to paired-end reads in .fastq.gz format. The pipeline expects the reads to be organized as forward and reverse reads for each sample.
+  
+  `transcriptome_file`: Path to the reference transcriptome file in FASTA format.
+  
+  `annotationfile_file`: Path to the reference genome annotation file in GTF format.
+  
+  `outdir`: Directory where the pipeline will store the output files.
+
+#### Please make sure that your fastqs are in .fastq.gz format and all of reads are placed in `raw_reads` directory, and your reference and gtf files are stored in `ref` directory. 
+
+# Usage
+
+```bash
+nextflow run transseqflow.nf --reads '/path/to/raw_reads/*_{1,2}.fastq.gz' --transcriptome_file '/path/to/ref/reference.fasta' --annotationfile_file '/path/to/ref/annotation.gtf'
+```
+
+# Outputs
+
+The results are saved in the specified output directory (outdir) and include:
+
+  - FASTQC quality reports
+
+  - A MultiQC summary report
+
+  - Trimmed reads
+
+  - BAM files (sorted and indexed)
+
+  - Gene count tables for each sample
