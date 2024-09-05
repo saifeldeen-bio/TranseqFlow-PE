@@ -35,7 +35,7 @@ The pipeline accepts the following input parameters:
 # Usage
 
 ```bash
-nextflow run transseqflow.nf --reads '/path/to/raw_reads/*_{1,2}.fastq.gz' --transcriptome_file '/path/to/ref/reference.fasta' --annotationfile_file '/path/to/ref/annotation.gtf'
+nextflow run transseqflow --reads '/path/to/raw_reads/*_{1,2}.fastq.gz' --transcriptome_file '/path/to/ref/reference.fasta' --annotationfile_file '/path/to/ref/annotation.gtf'
 ```
 
 # Outputs
